@@ -26,6 +26,7 @@ public class App {
 		ApplicationContext appContext = new ClassPathXmlApplicationContext("cl/cosmodev/spring/xml/beans.xml"); 
 			Persona p= (Persona)appContext.getBean("persona");
 			
-			System.out.println(p.getId()+"-"+p.getNombre()+"-"+p.getApodo());
+			System.out.println(p.getId()+"-"+p.getNombre()+"-"+p.getApodo()+"-"+p.getPais().getNombre()+"-"+p.getPais().getCiudad().getNombre()
+					);
 	}
 }
