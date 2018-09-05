@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!-- 	<bean id="mundo" class="cl.cosmodev.spring.beans.Mundo"> -->
+<!-- 		<property name="saludo" value="Hello World"></property> -->
+<!-- 	</bean> -->
+	
+	<bean id="persona" class="cl.cosmodev.spring.beans.Persona">
+<!-- 	se indica el tipo de dato para indicar el valor del constructor con type -->
+<!-- 	la propiedad index indica el valor que debe tomar el argumento en el constructor -->
+<!-- 	<constructor-arg type="String" value="Pepi"></constructor-arg> -->
+		<constructor-arg index="2" value="Pepi"></constructor-arg>
+		<constructor-arg index="0" value="1"></constructor-arg>
+		<constructor-arg index="1" value="Vale"></constructor-arg>
+	</bean>
+	
+</beans>
