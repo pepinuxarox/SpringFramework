@@ -2,7 +2,7 @@ package cl.cosmodev.spring.beans;
 
 public class Persona {
 	private int id;
-	private String nombre;
+	private String nombre; 
 	private String apodo;
 	
 	// Polimorfismo por el constructor al tener mas de una forma de instanciar esta clase
