@@ -1,10 +1,11 @@
 package cl.cosmodev.spring.beans;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Pais {
 	private String nombre;
 	
-
-	private Ciudad ciudad;
 
 	public String getNombre() {
 		return nombre;
@@ -14,12 +15,9 @@ public class Pais {
 		this.nombre = nombre;
 	}
 
-	public Ciudad getCiudad() {
-		return ciudad;
-	}
-
-	public void setCiudad(Ciudad ciudad) {
-		this.ciudad = ciudad;
+	@Override
+	public String toString() {
+		return nombre ;
 	}
 
 }

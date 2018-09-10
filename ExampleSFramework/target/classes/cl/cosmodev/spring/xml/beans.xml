@@ -1,46 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-
-	<!-- <bean id="mundo" class="cl.cosmodev.spring.beans.Mundo"> -->
-	<!-- <property name="saludo" value="Hello World"></property> -->
-	<!-- </bean> -->
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
 
 
-	<!-- injeccion de constructor -->
-	<bean id="persona" class="cl.cosmodev.spring.beans.Persona">
-		<!-- se indica el tipo de dato para indicar el valor del constructor con 
-			type -->
-		<!-- la propiedad index indica el valor que debe tomar el argumento en 
-			el constructor -->
-		<!-- <constructor-arg type="String" value="Pepi"></constructor-arg> -->
-		<!-- <constructor-arg index="2" value="Pepi"></constructor-arg> -->
-		<!-- <constructor-arg index="0" value="1"></constructor-arg> -->
-		<!-- <constructor-arg index="1" value="Vale"></constructor-arg> -->
-
-		<!-- cuando otro bean tiene el valor se hace referencia al otro bean con 
-			el tag ref -->
-		<!-- // o ingresar el bean nuevo en la property del valor que se requiere , a eso se le conoce como beans anidados -->
-		<property name="pais">
-			<bean id="pais" class="cl.cosmodev.spring.beans.Pais">
-				<property name="nombre" value="Chile"></property>
-				<!-- <property name="ciudad" ref="ciudad"></property> -->
-				
-				<property name="ciudad">
-					<bean id="ciudad" class="cl.cosmodev.spring.beans.Ciudad">
-						<property name="nombre" value="Santiago"></property>
-					</bean>
-				</property>
-			</bean>
-		</property>
-		<property name="id" value="1"></property>
-		<property name="nombre" value="Vale"></property>
-		<property name="apodo" value="Pepi"></property>
-
-	</bean>
-
-
+<!-- este bean permite que se usen anotaciones -->
+<!-- 	<bean class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor" /> -->
+<!-- 	<bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor" /> -->
+	
+<!-- 	recibe cualquier anotacion, debe tener el context agregado en el namespaces. -->
+<!-- <context:annotation-config/> -->
+<context:component-scan base-package="cl.cosmodev.spring.beans"></context:component-scan>
 
 </beans>
 
